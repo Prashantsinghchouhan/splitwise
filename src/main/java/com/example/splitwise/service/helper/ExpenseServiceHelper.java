@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class ExpenseServiceHelper {
-    private MembershipRepository membershipRepository;
+    private final MembershipRepository membershipRepository;
 
     public void validateAddExpenseRequest(AddExpenseRequest request){
         validateUserPresentInGroup(request);

@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/expense")
+@RequestMapping("/expenses")
 public class ExpenseController {
     private final ExpenseService expenseService;
 
     @PostMapping
-    private ResponseEntity<Void> addExpense(@RequestBody AddExpenseRequest addExpenseRequest){
+    public ResponseEntity<Void> addExpense(@RequestBody AddExpenseRequest addExpenseRequest){
         expenseService.addExpense(addExpenseRequest);
         return ResponseEntity.ok().build();
     }

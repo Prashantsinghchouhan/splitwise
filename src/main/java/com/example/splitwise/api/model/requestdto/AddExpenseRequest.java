@@ -2,16 +2,16 @@ package com.example.splitwise.api.model.requestdto;
 
 import com.example.splitwise.enums.SplitType;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
-@SuperBuilder
 @Getter
 @Setter
+@NoArgsConstructor
 public class AddExpenseRequest {
     private String groupId;
     private String paidByUserId;
