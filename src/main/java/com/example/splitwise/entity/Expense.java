@@ -1,6 +1,7 @@
 package com.example.splitwise.entity;
 
 import jakarta.persistence.Entity;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Expense extends BaseEntity {
     private String groupId;
     private String paidByUserId;

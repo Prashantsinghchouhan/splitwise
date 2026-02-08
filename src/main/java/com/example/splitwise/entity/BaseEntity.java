@@ -1,6 +1,7 @@
 package com.example.splitwise.entity;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.time.Instant;
 @Setter
 @SuperBuilder
 @MappedSuperclass
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
