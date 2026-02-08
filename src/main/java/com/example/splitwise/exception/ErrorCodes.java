@@ -12,6 +12,7 @@ public final class ErrorCodes {
     public static final String USER_NOT_IN_GROUP = "USER_NOT_IN_GROUP";
     // Conflict
     public static final String DUPLICATE_REQUEST = "DUPLICATE_REQUEST";
+    public static final String OPTIMISTIC_LOCK = "OPTIMISTIC_LOCK";
     // Authorization
     public static final String UNAUTHORIZED_ACTION = "UNAUTHORIZED_ACTION";
     // System (used by handler only)

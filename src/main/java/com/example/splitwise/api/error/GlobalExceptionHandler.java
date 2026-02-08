@@ -1,10 +1,10 @@
 package com.example.splitwise.api.error;
 
 
+import com.example.splitwise.api.model.responsedto.ErrorResponse;
 import com.example.splitwise.exception.conflict.ConflictException;
 import com.example.splitwise.exception.validation.ValidationException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

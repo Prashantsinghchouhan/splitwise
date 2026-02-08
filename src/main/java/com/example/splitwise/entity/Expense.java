@@ -1,5 +1,6 @@
 package com.example.splitwise.entity;
 
+import com.example.splitwise.enums.SplitType;
 import jakarta.persistence.Entity;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -19,4 +20,5 @@ public class Expense extends BaseEntity {
     private String paidByUserId;
     private BigDecimal totalAmount;
     private String description;
+    private SplitType splitType;
 }

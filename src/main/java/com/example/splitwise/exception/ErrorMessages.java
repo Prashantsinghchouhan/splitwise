@@ -21,6 +21,9 @@ public class ErrorMessages {
     public static final String DUPLICATE_REQUEST =
             "Duplicate request detected";
 
+    public static final String OPTIMISTIC_LOCK_ERROR =
+            "Ledger was updated concurrently. Please retry";
+
     // Authorization messages
     public static final String UNAUTHORIZED_ACTION =
             "You are not allowed to perform this action";

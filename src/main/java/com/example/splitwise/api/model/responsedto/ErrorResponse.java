@@ -1,4 +1,4 @@
-package com.example.splitwise.api.error;
+package com.example.splitwise.api.model.responsedto;
 
 import com.example.splitwise.exception.DomainException;
 import com.example.splitwise.exception.ErrorCodes;
