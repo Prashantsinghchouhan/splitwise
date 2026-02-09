@@ -18,6 +18,9 @@ public class ErrorMessages {
             "Percentage split must sum to 100";
 
     // Conflict messages
+    public static final String IDEMPOTENCY_KEY_EXPIRED =
+            "Idempotency key has expired. Please retry with a new key";
+
     public static final String DUPLICATE_REQUEST =
             "Duplicate request detected";
 
