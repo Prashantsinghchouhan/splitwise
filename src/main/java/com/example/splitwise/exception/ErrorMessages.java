@@ -8,6 +8,13 @@ public class ErrorMessages {
     public static final String USER_NOT_IN_GROUP =
             "User %s is not a member of group %s";
 
+    //Resource not found
+    public static final String USER_NOT_FOUND =
+            "User %s is not present";
+
+    public static final String GROUP_NOT_FOUND =
+            "Group %s is not present";
+
     public static final String INVALID_SPLIT_TYPE =
             "Split type %s is invalid";
 

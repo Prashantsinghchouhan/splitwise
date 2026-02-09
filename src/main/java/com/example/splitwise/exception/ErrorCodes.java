@@ -10,6 +10,9 @@ public final class ErrorCodes {
     // Validation
     public static final String INVALID_SPLIT = "INVALID_SPLIT";
     public static final String USER_NOT_IN_GROUP = "USER_NOT_IN_GROUP";
+    // Resource not found
+    public static final String USER_NOT_FOUND = "USER_NOT_FOUND";
+    public static final String GROUP_NOT_FOUND = "GROUP_NOT_FOUND";
     // Conflict
     public static final String IDEMPOTENCY_KEY_EXPIRED = "IDEMPOTENCY_KEY_EXPIRED";
     public static final String DUPLICATE_REQUEST = "DUPLICATE_REQUEST";

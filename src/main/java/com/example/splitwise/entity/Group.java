@@ -17,4 +17,5 @@ import lombok.experimental.SuperBuilder;
 public class Group extends BaseEntity {
     private String name;
     private String createdByUserId;
+    private String description;
 }

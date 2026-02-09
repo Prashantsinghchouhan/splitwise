@@ -33,7 +33,7 @@ public abstract class BaseEntity {
     }
 
     @PreUpdate
-    private  void postPersist(){
+    private  void onUpdate(){
         this.updatedAt = Instant.now();
     }
 }
