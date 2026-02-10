@@ -82,7 +82,6 @@ public class UserService {
             user.setLastName(request.getLastName());
             user.setMiddleName(request.getMiddleName());
             userRepository.saveAndFlush(user);
-            //EntityManager.flush() !!
             return UserResponse.from(user);
         } catch (OptimisticLockingFailureException ex) {
             throw ConcurrentUpdateException.optimisticLockException();

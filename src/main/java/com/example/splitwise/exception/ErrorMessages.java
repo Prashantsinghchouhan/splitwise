@@ -35,6 +35,9 @@ public class ErrorMessages {
             "Ledger was updated concurrently. Please retry";
 
     // Authorization messages
+    public static final String MISSING_USER_ID_HEADER =
+            "Missing X-User-Id header";
+
     public static final String UNAUTHORIZED_ACTION =
             "You are not allowed to perform this action";
 

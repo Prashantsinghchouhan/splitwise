@@ -1,6 +1,5 @@
-package com.example.splitwise.api.model.responsedto;
+package com.example.splitwise.api.model.responsedto.groups;
 
-import com.example.splitwise.api.model.requestdto.group.GroupRequest;
 import com.example.splitwise.entity.Group;
 import lombok.Builder;
 import lombok.Getter;

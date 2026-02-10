@@ -1,6 +1,7 @@
 package com.example.splitwise.api.error;
 
 
+import com.example.splitwise.exception.authorisation.UnauthorizedException;
 import com.example.splitwise.exception.conflict.ConflictException;
 import com.example.splitwise.exception.notfound.ResourceNotFoundException;
 import com.example.splitwise.exception.validation.ValidationException;
@@ -56,6 +57,34 @@ public class GlobalExceptionHandler {
         problem.setInstance(URI.create(request.getRequestURI()));
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(problem);
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<ProblemDetail> handleUnAuthorisation(
+            ResourceNotFoundException ex,
+            HttpServletRequest request
+    ) {
+        ProblemDetail problem = ProblemDetail.forStatus(HttpStatus.UNAUTHORIZED);
+        problem.setTitle(ex.getErrorCode());
+        problem.setDetail(ex.getMessage());
+        problem.setType(URI.create("https://api.splitwise.com/errors/unauthorized"));
+        problem.setInstance(URI.create(request.getRequestURI()));
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(problem);
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<ProblemDetail> handleForbiddenAction(
+            ResourceNotFoundException ex,
+            HttpServletRequest request
+    ) {
+        ProblemDetail problem = ProblemDetail.forStatus(HttpStatus.FORBIDDEN);
+        problem.setTitle(ex.getErrorCode());
+        problem.setDetail(ex.getMessage());
+        problem.setType(URI.create("https://api.splitwise.com/errors/forbidden"));
+        problem.setInstance(URI.create(request.getRequestURI()));
+
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(problem);
     }
 
     @ExceptionHandler(Exception.class)
